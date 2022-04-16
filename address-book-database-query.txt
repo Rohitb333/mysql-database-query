@@ -106,3 +106,13 @@ mysql> select * from Address_book where city = 'Nagpur' or state = 'maharashtra'
 | Abhishek  | Patil    | Nashik  | Nashik | maharashtra | 443045 |  8653256235 | mangeshp@gmail.com  |
 +-----------+----------+---------+--------+-------------+--------+-------------+---------------------+
 4 rows in set (0.00 sec)
+
+======================================= UC 7 Size of addressbook by city and state ==========================================
+
+mysql>  select count(firstname) from Address_book where city = 'Gondia';
++------------------+
+| count(firstname) |
++------------------+
+|                1 |
++------------------+
+1 row in set (0.00 sec)
