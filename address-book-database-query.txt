@@ -129,3 +129,49 @@ mysql> select firstname,city from Address_book order by city;
 | Priti     | Pune   |
 +-----------+--------+
 4 rows in set (0.00 se
+
+===================================== UC 9 Altering the table with addressbook name and contact type =========================
+
+mysql> alter table Address_book add bookname varchar(50) not null,add contacttype varchar(50) not null;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc address_book;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| firstname   | varchar(50)  | NO   |     | NULL    |       |
+| lastname    | varchar(50)  | NO   |     | NULL    |       |
+| address     | varchar(100) | NO   |     | NULL    |       |
+| city        | varchar(50)  | NO   |     | NULL    |       |
+| state       | varchar(50)  | NO   |     | NULL    |       |
+| zip         | int          | NO   |     | NULL    |       |
+| phonenumber | double       | NO   |     | NULL    |       |
+| email       | varchar(100) | NO   |     | NULL    |       |
+| bookname    | varchar(50)  | NO   |     | NULL    |       |
+| contacttype | varchar(50)  | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+10 rows in set (0.01 sec)
+
+mysql> update Address_book set bookname ='InfoBook',contacttype= 'friend' where lastname = 'Patil';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  select * from address_book;
++-----------+----------+---------+--------+-------------+--------+-------------+---------------------+----------+-------------+
+| firstname | lastname | address | city   | state       | zip    | phonenumber | email               | bookname | contacttype |
++-----------+----------+---------+--------+-------------+--------+-------------+---------------------+----------+-------------+
+| Rohit     | Bansod   | Nagpur  | Nagpur | maharashtra | 441904 |  8329522845 | rohitb333@gmail.com |          |             |
+| Priti     | Gajbhiye | Pune    | Pune   | maharashtra | 411041 |  9890743481 | pritig@gmail.com    |          |             |
+| Swati     | Chaware  | Gondia  | Gondia | maharashtra | 413041 |  9876632642 | swatic@gmail.com    |          |             |
+| Abhishek  | Patil    | Nashik  | Nashik | maharashtra | 443045 |  8653256235 | mangeshp@gmail.com  | InfoBook | friend      |
++-----------+----------+---------+--------+-------------+--------+-------------+---------------------+----------+-------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from Address_Book Where contacttype = 'friend';
++-----------+----------+---------+--------+-------------+--------+-------------+--------------------+----------+-------------+
+| firstname | lastname | address | city   | state       | zip    | phonenumber | email              | bookname | contacttype |
++-----------+----------+---------+--------+-------------+--------+-------------+--------------------+----------+-------------+
+| Abhishek  | Patil    | Nashik  | Nashik | maharashtra | 443045 |  8653256235 | mangeshp@gmail.com | InfoBook | friend      |
++-----------+----------+---------+--------+-------------+--------+-------------+--------------------+----------+-------------+
+1 row in set (0.00 sec)
