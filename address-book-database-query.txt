@@ -75,3 +75,21 @@ mysql>  select * from Address_book;
 | mangesh   | Patil    | Nashik   | Nashik   | maharashtra | 443045 |  8653256235 | mangeshp@gmail.com  |
 +-----------+----------+----------+----------+-------------+--------+-------------+---------------------+
 5 rows in set (0.00 sec)
+
+======================================= UC 4 Editing the existing contact by their firstname ================================
+
+mysql> update Address_book set firstname = 'Abhishek' where lastname = 'Patil';
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Address_book;
++-----------+----------+----------+----------+-------------+--------+-------------+---------------------+
+| firstname | lastname | address  | city     | state       | zip    | phonenumber | email               |
++-----------+----------+----------+----------+-------------+--------+-------------+---------------------+
+| Rohit     | Bansod   | Nagpur   | Nagpur   | maharashtra | 441904 |  8329522845 | rohitb333@gmail.com |
+| Mayur     | Borkar   | Bhandara | Bhandara | maharashtra | 441910 |  7620743481 | mayurb@gmail.com    |
+| Priti     | Gajbhiye | Pune     | Pune     | maharashtra | 411041 |  9890743481 | pritig@gmail.com    |
+| Swati     | Chaware  | Gondia   | Gondia   | maharashtra | 413041 |  9876632642 | swatic@gmail.com    |
+| Abhishek  | Patil    | Nashik   | Nashik   | maharashtra | 443045 |  8653256235 | mangeshp@gmail.com  |
++-----------+----------+----------+----------+-------------+--------+-------------+---------------------+
+5 rows in set (0.00 sec)
