@@ -212,3 +212,4 @@ mysql> select * from Address_book_details;
 |     2 | Student           |
 +-------+-------------------+
 2 rows in set (0.00 sec)
+
