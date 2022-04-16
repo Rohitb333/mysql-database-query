@@ -116,3 +116,16 @@ mysql>  select count(firstname) from Address_book where city = 'Gondia';
 |                1 |
 +------------------+
 1 row in set (0.00 sec)
+
+====================================== UC 8 Sorting the name alphbetically for given city ====================================
+
+mysql> select firstname,city from Address_book order by city;
++-----------+--------+
+| firstname | city   |
++-----------+--------+
+| Swati     | Gondia |
+| Rohit     | Nagpur |
+| Abhishek  | Nashik |
+| Priti     | Pune   |
++-----------+--------+
+4 rows in set (0.00 se
