@@ -93,3 +93,16 @@ mysql> select * from Address_book;
 | Abhishek  | Patil    | Nashik   | Nashik   | maharashtra | 443045 |  8653256235 | mangeshp@gmail.com  |
 +-----------+----------+----------+----------+-------------+--------+-------------+---------------------+
 5 rows in set (0.00 sec)
+
+=================================================== UC 6 Retrieving the contact by city or state =============================
+
+mysql> select * from Address_book where city = 'Nagpur' or state = 'maharashtra';
++-----------+----------+---------+--------+-------------+--------+-------------+---------------------+
+| firstname | lastname | address | city   | state       | zip    | phonenumber | email               |
++-----------+----------+---------+--------+-------------+--------+-------------+---------------------+
+| Rohit     | Bansod   | Nagpur  | Nagpur | maharashtra | 441904 |  8329522845 | rohitb333@gmail.com |
+| Priti     | Gajbhiye | Pune    | Pune   | maharashtra | 411041 |  9890743481 | pritig@gmail.com    |
+| Swati     | Chaware  | Gondia  | Gondia | maharashtra | 413041 |  9876632642 | swatic@gmail.com    |
+| Abhishek  | Patil    | Nashik  | Nashik | maharashtra | 443045 |  8653256235 | mangeshp@gmail.com  |
++-----------+----------+---------+--------+-------------+--------+-------------+---------------------+
+4 rows in set (0.00 sec)
